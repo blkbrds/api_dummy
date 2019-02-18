@@ -5,6 +5,6 @@
 ## Bắt đầu
 1. cài đặt nodejs và nvm
 *Cần có nodejs để chạy server*
-- Các bạn vào trang chủ của nodejs ![tại đây](https://nodejs.org/en/) để tải và cài đặt bản phù hợp.
+- Các bạn vào trang chủ của nodejs [tại đây](https://nodejs.org/en/) để tải và cài đặt bản phù hợp.
 *Kiểm tra lại bằng lệnh*
 `node - v`.
