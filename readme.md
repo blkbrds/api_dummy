@@ -24,6 +24,30 @@ Trong hình này thư mục **api** tương ứng với đường dẫn http://l
 ![](https://github.com/blkbrds/api_dummy/blob/master/Image/image4.png)  
 a. Tạo path tương tự với api url:  
 ![](https://github.com/blkbrds/api_dummy/blob/master/Image/image5.png)  
-b. Tạo file `health-info-settings.json` tương tự với `health-info-settings` trong url.  
-c. Copy nội dung response trong api doccument vào file mới tạo.  
+b. Tạo file `health-info-settings.json` tương tự với `health-info-settings` trong url và copy nội dung response trong api doccument vào file mới tạo.  
 ![](https://github.com/blkbrds/api_dummy/blob/master/Image/image6.png)  
+c. Test thử với postman:  
+![](https://github.com/blkbrds/api_dummy/blob/master/Image/image7.png)  
+- **Tạo các api phức tạp hơn**
+*Chúng ta thay đổi file .json một chút với các keys*
+- `method`: yêu cầu method gửi lên phải đúng nếu không sẽ báo lỗi method sai. `post`, `get`, `put` ...  
+- `params`: yêu cầu request gửi lên phải có params.  
+- `response`: response trả về.  
+**File json hoàn chỉnh như sau**  
+![](https://github.com/blkbrds/api_dummy/blob/master/Image/image8.png)  
+- trong trường hợp có nhiều response trả về: chúng ta thay key `response` bằng `responses` và thêm response vào `responses` như sau:  
+![](https://github.com/blkbrds/api_dummy/blob/master/Image/image9.png)  
+Key `200`, `201`... tương ứng với status code trả về.  
+* **Trường hợp đặc biệt url chứa id**  
+- Chúng ta sẽ dùng forder hoặc file `number` thay vì id đó (1, 2), khi đó, với bất kỳ id nào củng đều trỏ đến thư mục `number` hoặc file `number.json`.  
+- Trường hợp muốn response cố định cho id nào thì vẫn để id đó làm tên file hoặc forder.
+
+
+
+
+
+
+
+
+
+
