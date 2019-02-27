@@ -91,7 +91,11 @@ function parseFile(data, res, requestMethod, query) {
     res.end(jsonError);
     return;
   }
-  let jsonData = JSON.parse(data);
+  var jsonData = JSON.parse(data);
+  jsonData1 = jsonData[requestMethod.toLowerCase()]
+    if (jsonData1) {
+      jsonData = jsonData1
+    }
   var method = jsonData["method"];
   if (method == "" || !method) {
     method = "get";
