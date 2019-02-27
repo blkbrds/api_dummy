@@ -42,7 +42,10 @@ Key `200`, `201`... tương ứng với status code trả về.
 - Chúng ta sẽ dùng forder hoặc file `number` thay vì id đó (1, 2), khi đó, với bất kỳ id nào củng đều trỏ đến thư mục `number` hoặc file `number.json`.  
 - Trường hợp muốn response cố định cho id nào thì vẫn để id đó làm tên file hoặc forder.
 
-
+* **Trường hợp một url nhưng nhiều phương thức post, get ....**  
+- Chúng ta sẽ thay đổi file json một chút, coppy toàn bộ nội dung vào key `get` hoặc `post`.  
+ex:  
+![](https://github.com/blkbrds/api_dummy/blob/master/Image/image10.png)  
 
 
 
