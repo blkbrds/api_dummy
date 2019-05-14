@@ -142,12 +142,32 @@ function parseFile(data, res, requestMethod, query) {
     res.end();
     return
   }
-  let rsKeys = Object.keys(response);
+  let rKeys = Object.keys(response);
+  var rsKeys = []
+  for (i in rKeys) {
+    let key = rKeys[i]
+    console.log(key)
+    let kk = key.split("/");
+    console.log("kk: " + kk[0] + " " + kk[1])
+    if (cleanInt(kk[1]) > 0) {
+        for (i = 0; i < cleanInt(kk[1]); i += 1) {
+          console.log("key: " + key)
+          rsKeys.push(key)
+        }
+    } else {
+      console.log("key2: " + key)
+      rsKeys.push(key)
+    }
+  }
+  console.log(rsKeys.length)
   let index = getRandomInt(rsKeys.length);
   console.log('Index : ' + index);
   let returnData = response[rsKeys[index]];
-  console.log(returnData);
-  res.writeHead(rsKeys[index], { 'Content-Type': 'application/json' });
+  let kss = rsKeys[index]
+  let kk = kss.split("/")[0];
+  console.log("kss: " + kss)
+  console.log(kk)
+  res.writeHead(Number(kk), { 'Content-Type': 'application/json' });
   res.write(JSON.stringify(returnData));
   res.end();
 }
