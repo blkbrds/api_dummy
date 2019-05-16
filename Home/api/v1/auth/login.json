@@ -1,0 +1,43 @@
+{
+    "method": "post",
+    "params": {
+        "email": "superadministrator@app.com",
+        "password": "password"
+    },
+    "responses": {
+        "200/10": {
+            "status": "success",
+            "code": 200,
+            "data": {
+                "access_token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJodHRwOi8vYXBpLnRlc3QvdjEvYXV0aC9sb2dpbiIsImlhdCI6MTUzNjY2NTI2MCwiZXhwIjoxNTM3MjcwMDYwLCJuYmYiOjE1MzY2NjUyNjAsImp0aSI6Ik5oOWZTZWM3ZWJmazlmbVUiLCJzdWIiOjEsInBydiI6Ijk5ZjY5YmNiM2FmODQ2YjBmMDg0NTc4NWI1NjQwMDdiYTBiYmVlMzYifQ.6ddLlUibggojItxv0xMBWkq10-K3i8eSCugJVpJvTRU"
+            },
+            "token_type": "bearer",
+            "expires_in": 3600
+        },
+        "400": {
+            "code": 400,
+            "status": "error",
+            "data": [],
+            "message": "You have entered an invalid Email or Password."
+        },
+        "422": {
+            "code": 422,
+            "status": "error",
+            "data": [],
+            "message": {
+                "email": [
+                    "The email field is required."
+                ],
+                "password": [
+                    "The password field is required."
+                ]
+            }
+        },
+        "500": {
+            "code": 500,
+            "status": "error",
+            "data": [],
+            "message": "Internal Server Error."
+        }
+    }
+}

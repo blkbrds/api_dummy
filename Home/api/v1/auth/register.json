@@ -1,0 +1,47 @@
+{
+    "method": "post",
+    "params": {
+        "name": "nguyen van a",
+        "nick_name": "nickname",
+        "birthday": "2019/01/15",
+        "gender": 1,
+        "prefecture": 1,
+        "attribute": 1,
+        "email": "mail@gmail.com",
+        "password": "password",
+        "phone_number": "+81 6-4560-4427",
+        "holder_skill": "holder skill",
+        "qualification": "qualification",
+        "purpose": "purpose"
+    },
+    "responses": {
+        "201/5": {
+            "status": "success",
+            "code": 201,
+            "data": [],
+            "message": "Created"
+        },
+        "422": {
+            "code": 422,
+            "status": "error",
+            "data": [],
+            "message": {
+                "name": [
+                    "The name field is required."
+                ],
+                "email": [
+                    "The email field is required."
+                ],
+                "password": [
+                    "The password field is required."
+                ]
+            }
+        },
+        "500": {
+            "code": 500,
+            "status": "error",
+            "data": [],
+            "message": "Internal Server Error."
+        }
+    }
+}

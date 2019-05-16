@@ -1,0 +1,27 @@
+{
+    "method": "post",
+    "params": {
+        "request_id": "asd123123",
+        "code": 1234
+    },
+    "responses": {
+        "200/10": {
+            "status": "success",
+            "code": 200,
+            "data": []
+        },
+        "422": {
+            "code": 422,
+            "status": "error",
+            "data": [],
+            "message": {
+                "code": [
+                    "The code field is required."
+                ],
+                "request_id": [
+                    "The request id field is required."
+                ]
+            }
+        }
+    }
+}

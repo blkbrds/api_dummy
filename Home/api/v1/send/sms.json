@@ -1,0 +1,31 @@
+{
+    "method": "post",
+    "params": {
+        "phone_number": "+81 6-4560-4427"
+    },
+    "responses": {
+        "200/10": {
+            "status": "success",
+            "code": 200,
+            "data": {
+                "request_id": "asd123123"
+            }
+        },
+        "422": {
+            "code": 422,
+            "status": "error",
+            "data": [],
+            "message": {
+                "phone_number": [
+                    "The phone number field is required."
+                ]
+            }
+        },
+        "500": {
+            "code": 500,
+            "status": "error",
+            "data": [],
+            "message": "Internal Server Error."
+        }
+    }
+}
